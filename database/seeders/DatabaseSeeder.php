@@ -3,6 +3,9 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
+use App\Models\Option;
+use GuzzleHttp\Promise\Create;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -18,5 +21,13 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+        /* Option::create([
+            'code_opt'=> 'SIL',
+            'nom_opt'=> 'Systemes Informatiques et Logiciels',
+        ]); */
+        Option::create([
+            'code_opt'=> 'AGRO',
+            'nom_opt'=> 'Agronomie',
+        ]);
     }
 }
