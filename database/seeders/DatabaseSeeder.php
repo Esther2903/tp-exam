@@ -25,9 +25,17 @@ class DatabaseSeeder extends Seeder
             'code_opt'=> 'SIL',
             'nom_opt'=> 'Systemes Informatiques et Logiciels',
         ]); */
-        Option::create([
+        /* Option::create([
             'code_opt'=> 'AGRO',
             'nom_opt'=> 'Agronomie',
+        ]); */
+        Option::create([
+            'code_opt'=> 'RIT',
+            'nom_opt'=> 'Réseaux Informatiques et Télécommunications',
+        ]);
+        Option::create([
+            'code_opt'=> 'AGE',
+            'nom_opt'=> 'Administration et gestion des entreprises',
         ]);
     }
 }

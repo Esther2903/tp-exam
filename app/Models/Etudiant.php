@@ -9,6 +9,15 @@ class Etudiant extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'nom', 
+        'prenom',
+        'datnais',
+        'ville',
+        'sexe',
+        'option_id'
+    ];
+
     public function Option() {
         return $this->belongsTo(Option::class, 'CodeOpt', 'Id_etu');
     }
