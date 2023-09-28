@@ -26,12 +26,14 @@
         <th style="border: 1px solid #dddddd; text-align: left;padding: 8px;">Nom</th>
         <th style="border: 1px solid #dddddd; text-align: left;padding: 8px;">Prenom</th>
         <th style="border: 1px solid #dddddd; text-align: left;padding: 8px;">Sexe</th>
+        <th style="border: 1px solid #dddddd; text-align: left;padding: 8px;">Option</th>
     </tr>
     @foreach ($etudiants as $etudiant)
         <tr>
             <td style="border: 1px solid #dddddd; text-align: left;padding: 8px; background-color: #f2f2f2;"> {{$etudiant->nom}} </td>
             <td style="border: 1px solid #dddddd; text-align: left;padding: 8px; background-color: #f2f2f2;"> {{$etudiant->prenom}} </td>
             <td style="border: 1px solid #dddddd; text-align: left;padding: 8px; background-color: #f2f2f2;"> {{$etudiant->sexe}} </td>
+            <td style="border: 1px solid #dddddd; text-align: left;padding: 8px; background-color: #f2f2f2;"> {{$etudiant->option->code_opt}} </td>
         </tr>
     @endforeach
 </table>

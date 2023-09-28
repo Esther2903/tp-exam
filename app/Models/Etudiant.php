@@ -18,7 +18,7 @@ class Etudiant extends Model
         'option_id'
     ];
 
-    public function Option() {
-        return $this->belongsTo(Option::class, 'CodeOpt', 'Id_etu');
+    public function option() {
+        return $this->belongsTo(Option::class, 'option_id', 'id');
     }
 }

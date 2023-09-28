@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Option;
 use App\Models\Etudiant;
 use Illuminate\Http\Request;
+use PhpParser\Node\Expr\Empty_;
 
 class InscriptionController extends Controller
 {
@@ -43,8 +44,14 @@ class InscriptionController extends Controller
     public function recherche(Request $request){
         $options=Option::all();
         $recherche = $request->recherche;
+        /* dd($recherche); */
+        /* if(!empty($recherche)) {
+            dd($recherche);
+        } */
         $etudiants = Etudiant::query()
-                ->where('option_id', 'LIKE', '%' . $recherche . '%')
+                /* ->where('option_id', 'LIKE', '%' . $recherche . '%') */
+                ->Where('option_id', $recherche)
+                /* ->whereNom('toto') */
                 ->get();
         return view('rechercheDEC', compact('options', 'etudiants'));
     }
